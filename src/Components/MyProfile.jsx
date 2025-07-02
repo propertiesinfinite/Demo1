@@ -44,7 +44,7 @@ const MyProfile = () => {
             pincode: matchedUser.address.zipcode,
             street: matchedUser.address.street,
             district: matchedUser.address.city,
-            state: "", // Optional: fill in if needed
+            state: "", 
           });
         })
         .catch((err) => console.error("Error fetching user data:", err));
@@ -89,8 +89,7 @@ const MyProfile = () => {
             <span>Personal Information</span>
             <span
               style={{ color: "blue", cursor: "pointer" }}
-              onClick={() => setEditPersonal(!editPersonal)}
-            >
+              onClick={() => setEditPersonal(!editPersonal)}  >
               {editPersonal ? "Cancel" : "Edit"}
             </span>
           </h5>
@@ -103,10 +102,7 @@ const MyProfile = () => {
               value={personalInfo.name}
               onChange={(e) =>
                 setPersonalInfo({ ...personalInfo, name: e.target.value })
-              }
-              readOnly={!editPersonal}
-              placeholder="Name"
-            />
+              } readOnly={!editPersonal}  placeholder="Name" />
           </div>
           <div className="mb-3">
             <label className="fw-bold">Email Address</label>
@@ -115,11 +111,7 @@ const MyProfile = () => {
               className="form-control"
               value={personalInfo.email}
               onChange={(e) =>
-                setPersonalInfo({ ...personalInfo, email: e.target.value })
-              }
-              readOnly={!editPersonal}
-              placeholder="Email Address"
-            />
+                setPersonalInfo({ ...personalInfo, email: e.target.value })} readOnly={!editPersonal} placeholder="Email Address"  />
           </div>
           <div className="mb-3">
             <label className="fw-bold">Mobile Number</label>
@@ -128,11 +120,8 @@ const MyProfile = () => {
               className="form-control"
               value={personalInfo.phone}
               onChange={(e) =>
-                setPersonalInfo({ ...personalInfo, phone: e.target.value })
-              }
-              readOnly={!editPersonal}
-              placeholder="Mobile Number"
-            />
+                setPersonalInfo({ ...personalInfo, phone: e.target.value }) }
+              readOnly={!editPersonal} placeholder="Mobile Number"  />
           </div>
 
           {editPersonal && (
@@ -148,8 +137,7 @@ const MyProfile = () => {
             <span>Manage Address</span>
             <span
               style={{ color: "blue", cursor: "pointer" }}
-              onClick={() => setEditAddress(!editAddress)}
-            >
+              onClick={() => setEditAddress(!editAddress)} >
               {editAddress ? "Cancel" : "Edit"}
             </span>
           </h5>
@@ -160,12 +148,8 @@ const MyProfile = () => {
               className="form-control"
               value={addressInfo.address}
               onChange={(e) =>
-                setAddressInfo({ ...addressInfo, address: e.target.value })
-              }
-              readOnly={!editAddress}
-              placeholder="Address"
-              rows={2}
-            />
+                setAddressInfo({ ...addressInfo, address: e.target.value }) }
+              readOnly={!editAddress} placeholder="Address" rows={2} />
           </div>
 
           <div className="d-flex gap-2 mb-3">
@@ -176,10 +160,8 @@ const MyProfile = () => {
                 className="form-control"
                 value={addressInfo.door}
                 onChange={(e) =>
-                  setAddressInfo({ ...addressInfo, door: e.target.value })
-                }
-                readOnly={!editAddress}
-              />
+                  setAddressInfo({ ...addressInfo, door: e.target.value }) }
+                readOnly={!editAddress} />
             </div>
             <div className="flex-fill">
               <label>Pincode:</label>
@@ -188,10 +170,8 @@ const MyProfile = () => {
                 className="form-control"
                 value={addressInfo.pincode}
                 onChange={(e) =>
-                  setAddressInfo({ ...addressInfo, pincode: e.target.value })
-                }
-                readOnly={!editAddress}
-              />
+                  setAddressInfo({ ...addressInfo, pincode: e.target.value })}
+                readOnly={!editAddress}/>
             </div>
           </div>
 
@@ -202,10 +182,8 @@ const MyProfile = () => {
               className="form-control"
               value={addressInfo.street}
               onChange={(e) =>
-                setAddressInfo({ ...addressInfo, street: e.target.value })
-              }
-              readOnly={!editAddress}
-            />
+                setAddressInfo({ ...addressInfo, street: e.target.value })}
+              readOnly={!editAddress} />
           </div>
 
           <div className="d-flex gap-2 mb-3">
@@ -216,10 +194,8 @@ const MyProfile = () => {
                 className="form-control"
                 value={addressInfo.district}
                 onChange={(e) =>
-                  setAddressInfo({ ...addressInfo, district: e.target.value })
-                }
-                readOnly={!editAddress}
-              />
+                  setAddressInfo({ ...addressInfo, district: e.target.value }) }
+                readOnly={!editAddress} />
             </div>
             <div className="flex-fill">
               <label>State:</label>
@@ -228,10 +204,8 @@ const MyProfile = () => {
                 className="form-control"
                 value={addressInfo.state}
                 onChange={(e) =>
-                  setAddressInfo({ ...addressInfo, state: e.target.value })
-                }
-                readOnly={!editAddress}
-              />
+                  setAddressInfo({ ...addressInfo, state: e.target.value }) }
+                readOnly={!editAddress}  />
             </div>
           </div>
 

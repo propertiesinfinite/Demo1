@@ -52,20 +52,18 @@ const Product = () => {
               size={22}
               onClick={() => setLayout("grid")}
               color={layout === "grid" ? "#f18700" : "#aaa"}
-              style={{ cursor: "pointer", marginRight: "8px" }}
-            />
+              style={{ cursor: "pointer", marginRight: "8px" }} /> 
+
             <CiBoxList
               size={22}
               onClick={() => setLayout("list")}
               color={layout === "list" ? "#f18700" : "#aaa"}
-              style={{ cursor: "pointer" }}
-            />
+              style={{ cursor: "pointer" }} />
           </div>
 
           <div
             style={{ display: "flex", flexWrap: "wrap", justifyContent: "end" }}
-            className="product_sort_detail"
-          >
+            className="product_sort_detail" >
             <div className="result_text px-2">
               {loading
                 ? "Loading..."
@@ -79,8 +77,7 @@ const Product = () => {
                 name="featured"
                 style={{ background: "transparent" }}
                 value={sortOption}
-                onChange={(e) => setSortOption(e.target.value)}
-              >
+                onChange={(e) => setSortOption(e.target.value)} >
                 <option>Featured</option>
                 <option>Price, high to low</option>
                 <option>Price, low to high</option>
@@ -107,8 +104,7 @@ const Product = () => {
                   lg={layout === "grid" ? 3 : 12}
                   md={layout === "grid" ? 6 : 12}
                   sm={layout === "grid" ? 6 : 12}
-                  xs={layout === "grid" ? 6 : 12}
-                >
+                  xs={layout === "grid" ? 6 : 12} >
                   <Item product={e} layout={layout} />
                 </Col>
               ))}

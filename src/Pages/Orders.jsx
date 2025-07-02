@@ -1,4 +1,3 @@
-import React from "react";
 import "./Orders.css";
 import { Container } from "react-bootstrap";
 import { FaMobileAlt } from "react-icons/fa";
@@ -49,8 +48,7 @@ const OrderCard = ({ order }) => {
         <span
           className={`status ${
             order.status === "Order Placed" ? "placed" : "cancelled"
-          }`}
-        >
+          }`} >
           {order.status}
         </span>
       </div>
@@ -73,18 +71,10 @@ const Orders = () => {
       <div style={{ backgroundColor: "#f8f8f8" }}>
         <div style={{ backgroundColor: "#efefef", padding: "40px 16px" }}>
           <Container
-            style={{ display: "flex", justifyContent: "space-between" , height:"80px"}}
-          >
-            <h1 style={{ fontFamily: "'Times New Roman', Times, serif" }}>
-              MY ORDERS
-            </h1>
+            style={{ display: "flex", justifyContent: "space-between" , height:"80px"}} >
+            <h1 style={{ fontFamily: "'Times New Roman', Times, serif" }}> MY ORDERS </h1>
             <div>
-              <a
-                href="/"
-                style={{ color: "orangered", textDecoration: "none" }}
-              >
-                Home
-              </a>
+              <a href="/" style={{ color: "orangered", textDecoration: "none" }} > Home </a>
               <span className="ms-1"> / MY ORDERS</span>
             </div>
           </Container>

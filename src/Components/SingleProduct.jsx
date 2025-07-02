@@ -66,13 +66,11 @@ const SingleProduct = () => {
                   width: "100%",
                   boxShadow: "0 0px 10px #efefef",
                   padding: "20px",
-                }}
-              >
+                }} >
                 <img
                   src={`https://demo-wvl4.onrender.com/public/${selectedProduct.image}`}
                   alt="Product"
-                  style={{ width: "100%", height: "100%", objectFit: "contain" }}
-                />
+                  style={{ width: "100%", height: "100%", objectFit: "contain" }} />
               </div>
             </Col>
             <Col md={6} xs={11}>
@@ -96,20 +94,17 @@ const SingleProduct = () => {
                       gap: "10px",
                       border: "1px solid #ccc",
                       width: "fit-content",
-                    }}
-                  >
+                    }} >
                     <button
                       onClick={() => setCount((prev) => Math.max(prev - 1, 1))}
-                      style={{ border: "none", fontWeight: "bold", background: "none" }}
-                    >
+                      style={{ border: "none", fontWeight: "bold", background: "none" }} >
                       <h3 style={{ paddingLeft: "5px" }}>-</h3>
                     </button>
 
                     <span style={{ minWidth: "20px", textAlign: "center" }}>{count}</span>
                     <button
                       onClick={() => setCount((prev) => prev + 1)}
-                      style={{ border: "none", padding: "0px 2px", fontWeight: "bold", background: "none" }}
-                    >
+                      style={{ border: "none", padding: "0px 2px", fontWeight: "bold", background: "none" }} >
                       <h3 style={{ paddingRight: "5px" }}>+</h3>
                     </button>
                   </div>
@@ -126,8 +121,7 @@ const SingleProduct = () => {
                       borderRadius: "4px",
                       display: "flex",
                       alignItems: "center",
-                    }}
-                  >
+                    }} >
                     {selectedProduct.rating.rate}
                     <MdOutlineStar style={{ marginLeft: "4px" }} />
                   </div>

@@ -101,9 +101,7 @@ const NavSection1 = () => {
           display: "flex",
           justifyContent: "space-between",
           marginTop: "10px",
-          position: "relative",
-        }}
-      >
+          position: "relative", }}>
         <a href="/" style={{ textDecoration: "none", color: "black" }}>
           <h2>shopy</h2>
         </a>
@@ -114,20 +112,17 @@ const NavSection1 = () => {
             position: "relative",
             display: "flex",
             gap: "5px",
-            alignItems: "center",
-          }}
-        >
+            alignItems: "center", }}>
           <GoSearch
             style={{ marginTop: "5px", cursor: "pointer", color: "orange" }}
-            onClick={() => setSearchOpen(!searchOpen)}
-          />{" "}
-          |
+            onClick={() => setSearchOpen(!searchOpen)} />
+
+          {" "} |
 
           <div
             onMouseEnter={() => setDropdownOpen(true)}
             onMouseLeave={() => setDropdownOpen(false)}
-            style={{ position: "relative", display: "inline-block" }}
-          >
+            style={{ position: "relative", display: "inline-block" }} >
             <span style={{ cursor: "pointer" }}>
               <SlUser /> |
             </span>
@@ -143,25 +138,18 @@ const NavSection1 = () => {
                   zIndex: 1000,
                   padding: "10px",
                   fontSize: "15px",
-                  width: "100px",
-                }}
-              >
+                  width: "100px", }}>
                 {user ? (
                   <>
                     <Link
                       to="/proflie"
-                      style={{ textDecoration: "none", color: "black" }}
-                    >
-                      My Profile
+                      style={{ textDecoration: "none", color: "black" }}>My Profile
                     </Link>
                     <p
                       style={{
                         margin: "5px 0",
                         cursor: "pointer",
-                        color: "red",
-                      }}
-                      onClick={handleLogout}
-                    >
+                        color: "red", }} onClick={handleLogout} >
                       Logout
                     </p>
                   </>
@@ -170,9 +158,7 @@ const NavSection1 = () => {
                     style={{ margin: 0, cursor: "pointer" }}
                     onClick={() => {
                       setShowModal(true);
-                      setDropdownOpen(false);
-                    }}
-                  >
+                      setDropdownOpen(false); }} >
                     Login
                   </p>
                 )}
@@ -182,8 +168,7 @@ const NavSection1 = () => {
 
           <span
             onClick={toggleCart}
-            style={{ cursor: "pointer", position: "relative" }}
-          >
+            style={{ cursor: "pointer", position: "relative" }} >
             <SlHandbag />
             {cartData.length > 0 && (
               <span
@@ -195,9 +180,7 @@ const NavSection1 = () => {
                   color: "white",
                   fontSize: "12px",
                   borderRadius: "50%",
-                  padding: "2px 6px",
-                }}
-              >
+                  padding: "2px 6px", }} >
                 {cartData.length}
               </span>
             )}
@@ -214,9 +197,7 @@ const NavSection1 = () => {
             alignItems: "center",
             justifyContent: "center",
             marginTop: "-46px",
-            marginBottom: "5px",
-          }}
-        >
+            marginBottom: "5px", }} >
           <input
             type="text"
             placeholder="Search our store"
@@ -227,9 +208,7 @@ const NavSection1 = () => {
               border: "1px solid #ccc",
               borderTopLeftRadius: "5px",
               borderBottomLeftRadius: "5px",
-              outline: "none",
-            }}
-          />
+              outline: "none", }} />
           <button
             onClick={() => setSearchOpen(false)}
             style={{
@@ -239,9 +218,7 @@ const NavSection1 = () => {
               color: "white",
               cursor: "pointer",
               borderTopRightRadius: "5px",
-              borderBottomRightRadius: "5px",
-            }}
-          >
+              borderBottomRightRadius: "5px", }} >
             <GoSearch />
           </button>
         </div>
@@ -258,9 +235,7 @@ const NavSection1 = () => {
             backgroundColor: "white",
             padding: "20px",
             zIndex: 999,
-            overflowY: "auto",
-          }}
-        >
+            overflowY: "auto", }} >
           <h5>Cart Items</h5>
           {cartData.length > 0 ? (
             cartData.map((item, i) => (
@@ -271,15 +246,12 @@ const NavSection1 = () => {
                   alignItems: "center",
                   marginBottom: "10px",
                   borderBottom: "1px solid #ccc",
-                  paddingBottom: "10px",
-                }}
-              >
+                  paddingBottom: "10px", }} >
                 <img
                   src={`https://demo-wvl4.onrender.com/public/${item.image}`}
                   alt={item.title}
                   width={40}
-                  style={{ marginRight: 10 }}
-                />
+                  style={{ marginRight: 10 }} />
                 <div>
                   <strong style={{ fontSize: "14px" }}>{item.title}</strong>
                   <div>Qty: {item.quantity}</div>
@@ -294,12 +266,10 @@ const NavSection1 = () => {
             size="sm"
             variant="danger"
             style={{ marginTop: "15px" }}
-            onClick={() => setCartOpen(false)}
-          >
+            onClick={() => setCartOpen(false)} >
             Close
           </Button>
-        </div>
-      )}
+        </div> )}
 
       <Modal show={showModal} onHide={() => setShowModal(false)} centered>
         <Modal.Header closeButton>
@@ -310,15 +280,13 @@ const NavSection1 = () => {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             className="form-control mb-2"
-            placeholder="Username"
-          />
+            placeholder="Username" />
           <input
             type="password"
             value={password}
             className="form-control"
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="Password"
-          />
+            placeholder="Password" />
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={() => setShowModal(false)}>

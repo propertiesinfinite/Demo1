@@ -74,15 +74,13 @@ const Contact = () => {
     <input
       type="text"
       placeholder="Your Name*"
-      style={{ width: "100%", padding: "10px" }}
-    />
+      style={{ width: "100%", padding: "10px" }} />
   </td>
   <td className="col-12 col-md-6 p-2">
     <input
       type="text"
       placeholder="Your Email*"
-      style={{ width: "100%", padding: "10px" }}
-    />
+      style={{ width: "100%", padding: "10px" }} />
   </td>
 </tr>
 

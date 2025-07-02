@@ -17,18 +17,15 @@ const NavSection2 = () => {
         backgroundColor: "black",
         overflowX: "auto",
         textAlign: "center",
-        WebkitOverflowScrolling: "touch",
-      }}
-    >
+        WebkitOverflowScrolling: "touch",  }} >
+          
       <div
         style={{
           display: "inline-flex",
           gap: "20px",
           padding: "15px 20px",
-          whiteSpace: "nowrap",
-        }}
-        className="nav2"
-      >
+          whiteSpace: "nowrap", }} className="nav2" >
+
         <Link style={getLinkStyle("/")} to="/">Home</Link>
         <Link style={getLinkStyle("/about")} to="/about">About Us</Link>
         <Link style={getLinkStyle("/shop")} to="/shop">Shop</Link>
